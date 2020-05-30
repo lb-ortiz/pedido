@@ -66,7 +66,7 @@ const OrderButton = styled.button`
   margin-top: 15px;
   align-self: flex-end;
   border: none;
-  background-color: #e79652;
+  background-color: #ffcc2a;
   font-size: 25px;
 `;
 
@@ -96,9 +96,9 @@ class RestaurantDetails extends React.Component {
 
   submitOrder = () => {
     alert(
-      `Thank you for your order of the following delicious JSON:\n
+      `Obrigdo por pedir os seguintes itens:\n
   ${JSON.stringify(this.state.quantities)}\n
-(This is the end of the demo)`,
+`,
     );
   };
 
@@ -127,7 +127,7 @@ class RestaurantDetails extends React.Component {
             decrease={this.change(-1)}
           />
           <Total>Total: ${total}</Total>
-          <OrderButton onClick={this.submitOrder}>Order now</OrderButton>
+          <OrderButton onClick={this.submitOrder}>Confirmar</OrderButton>
         </MenuColumn>
         <ImageColumn>
           <RestaurantName>{name}</RestaurantName>
