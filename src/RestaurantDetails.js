@@ -126,7 +126,7 @@ class RestaurantDetails extends React.Component {
             increase={this.change(1)}
             decrease={this.change(-1)}
           />
-          <Total>Total: ${total}</Total>
+          <Total>Total: R${total}</Total>
           <OrderButton onClick={this.submitOrder}>Confirmar</OrderButton>
         </MenuColumn>
         <ImageColumn>

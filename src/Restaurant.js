@@ -34,10 +34,10 @@ class Restaurant extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return 'Loading';
+      return 'Carregando';
     }
     if (this.state.error) {
-      return 'Sorry, but that restaurant is currently unavailable.';
+      return 'Desculpe, Esse restaurante está indisponível.';
     }
 
     return <RestaurantDetails restaurant={this.state.restaurant} />;

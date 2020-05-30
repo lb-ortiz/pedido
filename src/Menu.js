@@ -41,7 +41,7 @@ const Button = styled.button`
 const MenuRow = ({ item, price, quantity, increase, decrease }) => (
   <Li>
     <span>
-      <Cell style={{ width: 55 }}>${price}</Cell>
+      <Cell style={{ width: 55 }}>R${price}</Cell>
       <Cell>{item}</Cell>
     </span>
     <QtyBox>
