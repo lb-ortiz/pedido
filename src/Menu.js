@@ -54,7 +54,7 @@ const MenuRow = ({ item, price, quantity, increase, decrease }) => (
       <Cell>
         <Button onClick={increase}>+</Button>
       </Cell>
-      <Cell>${quantity * price}</Cell>
+      <Cell>R${quantity * price}</Cell>
     </QtyBox>
   </Li>
 );
