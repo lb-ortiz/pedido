@@ -1,10 +1,10 @@
 {
-  "name": "@micro-frontends-demo/restaurant-order",
+  "name": "feira_demo",
   "version": "1.0.0",
-  "description": "A micro frontend for ordering food from a restaurant",
-  "repository": "git@github.com:micro-frontends-demo/restaurant-order",
-  "author": "Cam Jackson",
-  "license": "MIT",
+  "description": "tcc starter projetct",
+  "repository": "git@github.com:lb-ortiz/content",
+  "author": "leo&lucas",
+  "license": "none",
   "scripts": {
     "format": "prettier --write",
     "start": "react-app-rewired start",
@@ -27,7 +27,8 @@
     "jest-enzyme": "^6.0.2",
     "jest-fetch-mock": "^1.6.5",
     "prettier": "^1.11.1",
-    "react-app-rewired": "^2.1.1"
+    "react-app-rewired": "^2.1.1",
+    "ws": "3.3.2"
   },
   "config-overrides-path": "node_modules/react-app-rewire-micro-frontends",
   "prettier": {
