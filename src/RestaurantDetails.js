@@ -140,4 +140,5 @@ class RestaurantDetails extends React.Component {
     );
   }
 }
+
 export default RestaurantDetails;
