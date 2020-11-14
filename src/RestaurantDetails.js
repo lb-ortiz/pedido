@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Menu from './Menu';
+import { withRouter } from "react-router-dom";
 
 const smallScreen = `@media(max-width: 1080px)`;
 
@@ -82,6 +83,7 @@ class RestaurantDetails extends React.Component {
         }),
         {},
       ),
+	  total:0,
     };
   }
 
@@ -94,12 +96,10 @@ class RestaurantDetails extends React.Component {
     }));
   };
 
-  submitOrder = () => {
-    alert(
-      `Obrigdo por pedir os seguintes itens:\n
-  ${JSON.stringify(this.state.quantities)}\n
-`,
-    );
+
+   submitOrder = () => {
+    
+	this.props.history.push("/checkout/" + this.state.total);  
   };
 
   render() {
@@ -116,6 +116,8 @@ class RestaurantDetails extends React.Component {
         sum + this.state.quantities[menuItem.item] * menuItem.price,
       0,
     );
+	
+	this.state.total = total;
 
     return (
       <Container>
@@ -128,7 +130,7 @@ class RestaurantDetails extends React.Component {
           />
           <Total>Total: R${total}</Total>
           <OrderButton onClick={this.submitOrder}>Confirmar</OrderButton>
-        </MenuColumn>
+		 </MenuColumn>
         <ImageColumn>
           <RestaurantName>{name}</RestaurantName>
           <Figure>
@@ -141,4 +143,4 @@ class RestaurantDetails extends React.Component {
   }
 }
 
-export default RestaurantDetails;
+export default withRouter(RestaurantDetails);
